@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigator Tours & Travels | Your Trusted Travel Partner</title>
+<meta name="description" content="Navigator Tours & Travels - Affordable domestic tour packages, flight bookings, hotels, bus tickets, and travel insurance in Thrissur, Kerala.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <svg class="loader-compass" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="42" class="compass-ring"/>
+      <path d="M50 20 L58 50 L50 80 L42 50 Z" class="compass-needle"/>
+    </svg>
+    <span class="loader-text">NAVIGATOR</span>
+  </div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <svg class="logo-icon" viewBox="0 0 40 40" width="34" height="34">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M20 6 L24 18 L20 34 L16 18 Z" fill="currentColor"/>
+      </svg>
+      <span class="logo-text">Navigator<span class="logo-accent">.</span></span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#destinations" class="nav-link">Destinations</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <div class="nav-cta-wrap">
+        <a href="tel:+919562893380" class="nav-phone"><i class="fa-solid fa-phone"></i> +91 95628 93380</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <button class="theme-toggle mobile-only" id="themeToggleMobile" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kerala_backwater_20080218-11.jpg?width=1920" alt="Kerala backwaters, India" loading="eager">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- animated clouds -->
+  <div class="clouds" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- signature flight path -->
+  <svg class="flight-path" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+    <path id="routeLine" d="M60,420 C 300,120 550,480 780,180 S 1050,260 1150,80" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="10 10"/>
+    <defs>
+      <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#e8c777"/>
+        <stop offset="100%" stop-color="#c9a44c"/>
+      </linearGradient>
+    </defs>
+    <circle cx="60" cy="420" r="6" fill="#e8c777"/>
+    <circle cx="1150" cy="80" r="6" fill="#e8c777"/>
+    <g id="planeIcon" transform="translate(60,420)">
+      <path d="M0,-8 L14,0 L0,8 L3,0 Z" fill="#ffffff" transform="rotate(-40)"/>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal-item">★ 4.8 / 5 &nbsp;·&nbsp; 19 Google Reviews</p>
+    <h1 class="hero-title reveal-item">Explore India with <span class="gold-text">Navigator</span> Tours &amp; Travels</h1>
+    <p class="hero-subtitle reveal-item">We provide affordable domestic tour packages, flight bookings, hotels, bus tickets, travel insurance, and more.</p>
+    <div class="hero-btns reveal-item">
+      <a href="#destinations" class="btn btn-gold">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+
+    <div class="hero-stats reveal-item">
+      <div class="stat">
+        <span class="stat-num" data-count="4800" data-decimal="10">0</span>
+        <span class="stat-label">Rating</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-count="19">0</span>
+        <span class="stat-label">Google Reviews</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-count="10">0</span>
+        <span class="stat-label">Destinations</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual fade-in-up">
+      <div class="about-img-wrap">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Luggage_at_airport.jpg?width=900" alt="Travel planning" class="about-img-main">
+        <div class="about-badge glass">
+          <i class="fa-solid fa-earth-asia"></i>
+          <div>
+            <strong>10+</strong>
+            <span>Destinations Curated</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-ring" aria-hidden="true"></div>
+    </div>
+
+    <div class="about-copy">
+      <p class="section-eyebrow fade-in-up">Who We Are</p>
+      <h2 class="section-title fade-in-up">A Travel Partner You Can Actually Trust</h2>
+      <p class="section-text fade-in-up">Navigator Tours &amp; Travels has spent years turning holiday wishlists into real itineraries — without the markups, the guesswork, or the runaround. Based in Thrissur, Kerala, we plan domestic escapes across India with the same close attention, from the first quote to the airport drop-off.</p>
+
+      <ul class="about-points">
+        <li class="fade-in-up"><i class="fa-solid fa-shield-heart"></i><div><strong>Trusted Travel Agency</strong><span>19 verified Google reviews and a 4.8 rating built one happy traveller at a time.</span></div></li>
+        <li class="fade-in-up"><i class="fa-solid fa-tags"></i><div><strong>Affordable Prices</strong><span>Transparent, budget-friendly packages — no hidden costs.</span></div></li>
+        <li class="fade-in-up"><i class="fa-solid fa-users-gear"></i><div><strong>Experienced Team</strong><span>Specialists in visas, documentation, and itinerary planning.</span></div></li>
+        <li class="fade-in-up"><i class="fa-solid fa-heart-circle-check"></i><div><strong>Personalised Service</strong><span>Every trip planned around how you actually want to travel.</span></div></li>
+      </ul>
+
+      <a href="#services" class="btn btn-navy fade-in-up">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES SECTION ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <p class="section-eyebrow center fade-in-up">What We Offer</p>
+    <h2 class="section-title center fade-in-up">Everything Your Journey Needs</h2>
+    <p class="section-text center fade-in-up">From the first flight search to the last passport stamp — one agency, every detail handled.</p>
+
+    <div class="services-grid">
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        <h3>Flight Ticket Booking</h3>
+        <p>Best fares across domestic &amp; international airlines, booked in minutes.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+        <h3>Domestic Tours</h3>
+        <p>Kashmir to Kerala — explore India's finest without the planning stress.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+        <h3>Hotel Booking</h3>
+        <p>Handpicked stays for every budget, from cosy to luxury.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-bus"></i></div>
+        <h3>Bus Tickets</h3>
+        <p>Comfortable, reliable bus travel booked instantly.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-umbrella"></i></div>
+        <h3>Travel Insurance</h3>
+        <p>Travel worry-free with comprehensive coverage plans.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-file-shield"></i></div>
+        <h3>Document Attestation</h3>
+        <p>Attestation services handled accurately and on time.</p>
+      </div>
+      <div class="service-card glass fade-in-up">
+        <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
+        <h3>Airport Pickup &amp; Drop</h3>
+        <p>Reliable transfers so your trip starts stress-free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS SECTION ============ -->
+<section class="destinations" id="destinations">
+  <div class="container">
+    <p class="section-eyebrow center fade-in-up">Popular Destinations</p>
+    <h2 class="section-title center fade-in-up">Where Will You Go Next?</h2>
+    <p class="section-text center fade-in-up">Ten handpicked destinations, planned down to the last detail.</p>
+
+    <div class="dest-grid" id="destGrid">
+      <!-- Destination cards injected by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY SECTION ============ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <p class="section-eyebrow center fade-in-up">Gallery</p>
+    <h2 class="section-title center fade-in-up">Moments From The Journey</h2>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Gallery items injected by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS SECTION ============ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <p class="section-eyebrow center fade-in-up">Reviews</p>
+    <h2 class="section-title center fade-in-up">What Our Travellers Say</h2>
+
+    <div class="reviews-score fade-in-up">
+      <span class="score-num">4.8</span>
+      <div>
+        <div class="score-stars">★★★★★</div>
+        <span>Based on 19 Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="testimonial-slider fade-in-up">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“Best Service For Affordable Price.”</p>
+          <span class="testimonial-author">— Google Review</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“It was an amazing experience. Thank you Navigator Tours &amp; Travels!”</p>
+          <span class="testimonial-author">— Google Review</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>“Professional staff and excellent customer service.”</p>
+          <span class="testimonial-author">— Google Review</span>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+      <button class="testi-arrow left" id="testiPrev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="testi-arrow right" id="testiNext" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info fade-in-up">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">Plan Your Next Trip With Us</h2>
+      <p class="section-text">Reach out and our team will get back to you with the best options for your journey.</p>
+
+      <div class="info-card glass">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <strong>Address</strong>
+          <span>Near De Paul EM High School, St. Joseph Hospital Road, Parappuram, Choondal, Thrissur, Kerala - 680502</span>
+        </div>
+      </div>
+      <div class="info-card glass">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <strong>Phone</strong>
+          <span><a href="tel:+919562893380">+91 95628 93380</a></span>
+        </div>
+      </div>
+      <div class="info-card glass">
+        <i class="fa-solid fa-star"></i>
+        <div>
+          <strong>Rating</strong>
+          <span>4.8 / 5 — 19 Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=Near%20De%20Paul%20EM%20High%20School%2C%20St%20Joseph%20Hospital%20Road%2C%20Parappuram%2C%20Choondal%2C%20Thrissur%2C%20Kerala%20680502&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Navigator Tours & Travels Location"></iframe>
+      </div>
+    </div>
+
+    <form class="contact-form glass fade-in-up" id="contactForm" novalidate>
+      <h3>Send an Enquiry</h3>
+
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder=" " required>
+        <label for="name">Full Name</label>
+        <span class="error-msg" id="nameError"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email">Email Address</label>
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder=" " required>
+        <label for="phone">Phone Number</label>
+        <span class="error-msg" id="phoneError"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="destination" name="destination" placeholder=" " required>
+        <label for="destination">Preferred Destination</label>
+        <span class="error-msg" id="destinationError"></span>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+        <label for="message">Message</label>
+        <span class="error-msg" id="messageError"></span>
+      </div>
+
+      <button type="submit" class="btn btn-gold full">Send Enquiry <i class="fa-solid fa-paper-plane"></i></button>
+      <p class="form-success" id="formSuccess">Thank you! Your enquiry has been sent — we'll be in touch shortly.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo footer-logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" width="30" height="30">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 6 L24 18 L20 34 L16 18 Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Navigator<span class="logo-accent">.</span></span>
+      </a>
+      <p>Your Trusted Travel Partner — planning journeys across Kerala and the world since day one.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Flight Booking</a>
+      <a href="#services">Hotel Booking</a>
+      <a href="#services">Bus Tickets</a>
+      <a href="#services">Travel Insurance</a>
+      <a href="#services">Document Attestation</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Choondal, Thrissur, Kerala - 680502</p>
+      <p><i class="fa-solid fa-phone"></i> +91 95628 93380</p>
+      <p><i class="fa-solid fa-star"></i> 4.8 / 5 — 19 Google Reviews</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Navigator Tours &amp; Travels. All Rights Reserved.</p>
+    <p class="footer-credit">Destination photography courtesy of Wikimedia Commons contributors.</p>
+  </div>
+</footer>
+
+<!-- ============ SCROLL TO TOP ============ -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
