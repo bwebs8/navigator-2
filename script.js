@@ -204,58 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoSlide();
   }
 
-  /* ---------------- CONTACT FORM VALIDATION ---------------- */
-  const form = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-
-  const validators = {
-    name: (v) => v.trim().length >= 2 ? '' : 'Please enter your full name.',
-    email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
-    phone: (v) => /^[0-9+\-\s()]{7,15}$/.test(v.trim()) ? '' : 'Please enter a valid phone number.',
-    destination: (v) => v.trim().length >= 2 ? '' : 'Please tell us your preferred destination.',
-    message: (v) => v.trim().length >= 10 ? '' : 'Message should be at least 10 characters.'
-  };
-
-  function validateField(field) {
-    const value = field.value;
-    const errorEl = document.getElementById(field.id + 'Error');
-    const message = validators[field.id] ? validators[field.id](value) : '';
-    field.closest('.form-group').classList.toggle('invalid', !!message);
-    if (errorEl) errorEl.textContent = message;
-    return !message;
-  }
-
-  if (form) {
-    Object.keys(validators).forEach(id => {
-      const field = document.getElementById(id);
-      if (field) {
-        field.addEventListener('blur', () => validateField(field));
-        field.addEventListener('input', () => {
-          if (field.closest('.form-group').classList.contains('invalid')) validateField(field);
-        });
-      }
-    });
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-      Object.keys(validators).forEach(id => {
-        const field = document.getElementById(id);
-        if (field && !validateField(field)) isValid = false;
-      });
-
-      if (isValid) {
-        formSuccess.classList.add('show');
-        form.reset();
-        setTimeout(() => formSuccess.classList.remove('show'), 5000);
-      } else {
-        formSuccess.classList.remove('show');
-        const firstInvalid = form.querySelector('.form-group.invalid input, .form-group.invalid textarea');
-        if (firstInvalid) firstInvalid.focus();
-      }
-    });
-  }
-
   /* ---------------- DARK / LIGHT MODE TOGGLE ---------------- */
   const themeToggle = document.getElementById('themeToggle');
   const themeToggleMobile = document.getElementById('themeToggleMobile');
