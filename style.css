@@ -97,15 +97,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- LOADER ---------- */
 .loader {
   position: fixed; inset: 0; z-index: 9999;
-  background: radial-gradient(circle at center, var(--navy) 0%, var(--navy-deep) 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #f4f0e6 100%);
   display: flex; align-items: center; justify-content: center;
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 .loader.hidden { opacity: 0; visibility: hidden; }
 .loader-inner { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-.loader-logo { width: 48px; height: 48px; max-width: 48px; max-height: 48px; object-fit: contain; border-radius: 12px; animation: pulseLogo 1.4s ease-in-out infinite; }
+.loader-logo { width: 150px; height: auto; max-width: 60vw; object-fit: contain; animation: pulseLogo 1.4s ease-in-out infinite; }
 @keyframes pulseLogo { 0%, 100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.08); opacity: 1; } }
-.loader-text { color: var(--text-on-dark); letter-spacing: 6px; font-size: 13px; font-weight: 600; }
+.loader-text { color: var(--navy-deep); letter-spacing: 6px; font-size: 13px; font-weight: 600; }
 
 /* ---------- SCROLL PROGRESS ---------- */
 .scroll-progress {
@@ -135,7 +135,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; color: var(--white); }
-.logo-img { width: 28px; height: 28px; max-width: 28px; max-height: 28px; object-fit: contain; border-radius: 6px; flex-shrink: 0; }
+.logo-img { width: 38px; height: auto; object-fit: contain; flex-shrink: 0; }
 .logo-text { font-family: var(--font-display); font-size: 17px; font-weight: 700; letter-spacing: 0.3px; line-height: 1.15; white-space: nowrap; }
 .logo-accent { color: var(--gold); }
 
@@ -402,7 +402,7 @@ section { padding: 110px 0; position: relative; }
 .map-embed { height: 260px; border-radius: var(--radius-md); overflow: hidden; margin-top: 26px; box-shadow: var(--shadow-soft); }
 
 .whatsapp-card { padding: 44px 40px; border-radius: var(--radius-lg); text-align: center; display: flex; flex-direction: column; align-items: center; }
-.whatsapp-logo { width: 48px; height: 48px; max-width: 48px; max-height: 48px; object-fit: contain; border-radius: 12px; margin-bottom: 20px; box-shadow: var(--shadow-soft); }
+.whatsapp-logo { width: 150px; height: auto; max-width: 70%; object-fit: contain; margin-bottom: 20px; }
 .whatsapp-card h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 12px; color: var(--navy-deep); }
 [data-theme="dark"] .whatsapp-card h3 { color: var(--text-on-dark); }
 .whatsapp-card p { color: var(--text-muted); font-size: 14.5px; margin-bottom: 28px; max-width: 340px; }
@@ -419,7 +419,7 @@ section { padding: 110px 0; position: relative; }
 .footer { background: var(--navy-deep); color: var(--text-on-dark-muted); padding: 80px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .footer-logo { margin-bottom: 16px; }
-.footer-logo .logo-img { width: 24px; height: 24px; max-width: 24px; max-height: 24px; }
+.footer-logo .logo-img { width: 34px; height: auto; }
 .footer-brand p { font-size: 14px; line-height: 1.7; margin-bottom: 22px; max-width: 300px; }
 .social-icons { display: flex; gap: 12px; }
 .social-icons a {
