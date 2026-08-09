@@ -20,16 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const WM = (file) => `https://commons.wikimedia.org/wiki/Special:FilePath/${file}?width=700`;
 
   const destinations = [
-    { name: 'Kashmir', desc: 'Snow-capped valleys and houseboats on Dal Lake.', img: WM('Houseboat-_Dal_Lake,_srinagar_Kashmir.JPG') },
+    { name: 'Dubai', desc: 'Skyscrapers, souks and desert safaris in one dazzling city.', img: WM('Dubai_Skyline_and_Burj_Khalifa_-_25072008.jpg') },
+    { name: 'Singapore', desc: 'A futuristic skyline packed with gardens and world flavours.', img: WM('Marina_Bay_Sands_and_the_skyline_of_the_Central_Business_District,_Singapore,_at_dusk_-_20120805.jpg') },
+    { name: 'Malaysia', desc: 'The Petronas Towers, street food, and Kuala Lumpur\'s buzz.', img: WM('2016_Kuala_Lumpur,_Petronas_Towers_(26).jpg') },
     { name: 'Ooty', desc: 'Misty hills, tea gardens and a toy train through the Nilgiris.', img: WM('Ooty,_Tamil_Nadu,_INDIA.JPG') },
     { name: 'Munnar', desc: 'Rolling tea estates and cool hill-station air in Kerala.', img: WM('Munnar_tea_gardens.jpg') },
-    { name: 'Wayanad', desc: 'Misty ghats, wildlife and waterfalls in Kerala\'s green heartland.', img: WM('Pozhuthana_Wayanad.jpg') },
-    { name: 'Goa', desc: 'Golden beaches, Portuguese charm and endless sunsets.', img: WM('Candolim_Beach_Goa.jpg') },
-    { name: 'Coorg', desc: 'Coffee plantations and waterfalls in Karnataka\'s hill country.', img: WM('Kodagu,Coorg,_Karnataka.jpg') },
-    { name: 'Manali', desc: 'Snow peaks, river valleys and adventure sports in Himachal.', img: WM('Mountains,_Manali,_Himachal_Pradesh.jpg') },
-    { name: 'Andaman', desc: 'Turquoise waters and coral reefs on India\'s island getaway.', img: WM('Havelock_Island,_Mangrove_tree_on_the_beach,_Andaman_Islands.jpg') },
-    { name: 'Rajasthan', desc: 'Forts, palaces and desert safaris across the royal state.', img: WM('Thar_desert_Rajasthan_India.jpg') },
-    { name: 'Shimla', desc: 'Colonial charm and pine-covered slopes in the Himalayan foothills.', img: WM('Landscape_of_Shimla_,_Himachal_Pradesh.jpg') }
+    { name: 'Wayanad', desc: 'Misty ghats, wildlife and waterfalls in Kerala\'s green heartland.', img: WM('Pozhuthana_Wayanad.jpg') }
   ];
 
   const destGrid = document.getElementById('destGrid');
@@ -53,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: WM('Goa_beautiful_beach.JPG').replace('width=700', 'width=900'), label: 'Beaches' },
     { src: WM('Himalayas_in_India.jpg'), label: 'Mountains' },
     { src: WM('Heritage_Machan_Tree_house_hotel_in_Lonavala,_India_-_2008.jpg'), label: 'Hotels' },
-    { src: WM('Plane_wing.JPG').replace('width=700', 'width=900'), label: 'Airplanes' },
-    { src: WM('Adventures_camping_in_rishikesh.jpg'), label: 'Adventure' },
-    { src: WM('The_adorable_family_vacation.jpg'), label: 'Family Trips' }
+    { src: WM('At_the_Top_SKY_@_Burj_Khalifa_@_Dubai_(15700184337).jpg').replace('width=700', 'width=900'), label: 'Burj Khalifa' },
+    { src: WM('Burj_Al_Arab_(52070466433).jpg').replace('width=700', 'width=900'), label: 'Burj Al Arab, Dubai' },
+    { src: WM('Petronas_Towers_at_Night_-_from_the_base_upwards.jpg').replace('width=700', 'width=900'), label: 'Petronas Twin Towers' }
   ];
 
   const galleryGrid = document.getElementById('galleryGrid');
